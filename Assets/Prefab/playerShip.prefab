@@ -21,9 +21,9 @@ GameObject:
   - component: {fileID: 4100186290892432}
   - component: {fileID: 212329257797894262}
   - component: {fileID: 50953006667054982}
-  - component: {fileID: 114323655627826738}
-  - component: {fileID: 114018134418935132}
   - component: {fileID: 60216740649206086}
+  - component: {fileID: 114578748539210850}
+  - component: {fileID: 114389676160782658}
   m_Layer: 0
   m_Name: playerShip
   m_TagString: playerShip
@@ -111,7 +111,7 @@ PolygonCollider2D:
       - {x: 1.0800419, y: -2.0139732}
       - {x: 2.184231, y: -2.2648716}
       - {x: 2.464273, y: -2.3315392}
---- !u!114 &114018134418935132
+--- !u!114 &114389676160782658
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -119,13 +119,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1076926386917878}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a01c1b0d5653a64eaf456c5c2247417, type: 3}
+  m_Script: {fileID: 11500000, guid: b0645bf5936d9a64982bf54f95c14ee8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  friendly: 1
   projectile: {fileID: 1606105313705396, guid: 23f5e9e348422334bb2d0a6870d2fdc6, type: 2}
-  speed: 60
+  speed: 80
   fireRate: 0.2
---- !u!114 &114323655627826738
+--- !u!114 &114578748539210850
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -133,13 +134,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1076926386917878}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32400757099983d4aa929c4e660bb697, type: 3}
+  m_Script: {fileID: 11500000, guid: a59888aeb125c5a499eeab5841713827, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
   gameOverText: {fileID: 0}
-  speed: 80
-  rb: {fileID: 50953006667054982}
+  score: 0
+  friendly: 1
+  speed: 30
   velocity: {x: 0, y: 0}
+  lives: 0
+  motionType: 0
 --- !u!212 &212329257797894262
 SpriteRenderer:
   m_ObjectHideFlags: 1

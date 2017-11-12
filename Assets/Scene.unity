@@ -277,7 +277,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 120493969}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 436, y: 201.5, z: 0}
+  m_LocalPosition: {x: 546, y: 436.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 929982140}
@@ -371,6 +371,16 @@ Prefab:
       propertyPath: gameOverText
       value: 
       objectReference: {fileID: 867246677}
+    - target: {fileID: 114578748539210850, guid: b594078e8cda48e4282366ca6b86a871,
+        type: 2}
+      propertyPath: gameOverText
+      value: 
+      objectReference: {fileID: 867246677}
+    - target: {fileID: 114578748539210850, guid: b594078e8cda48e4282366ca6b86a871,
+        type: 2}
+      propertyPath: scoreText
+      value: 
+      objectReference: {fileID: 120493971}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b594078e8cda48e4282366ca6b86a871, type: 2}
   m_IsPrefabParent: 0
@@ -638,7 +648,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 929982136}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 396, y: 211.5, z: 0}
+  m_LocalPosition: {x: 506, y: 446.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 867246676}
@@ -660,7 +670,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1153184454}
   - component: {fileID: 1153184453}
-  - component: {fileID: 1153184455}
   m_Layer: 8
   m_Name: Enemy Spawn
   m_TagString: Untagged
@@ -676,11 +685,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1153184452}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e365be6fc0bfcd4494aee0794471347, type: 3}
+  m_Script: {fileID: 11500000, guid: 94a055e55f2c59c418bd0000ca042a1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 1902929778330806, guid: e77aa4c64d051f44eb577c383b0c7548, type: 2}
-  spawnRate: 0.5
+  spawnRate: 0.2
+  lastSpawn: 0
+  spawnAmount: 0
+  ship: {fileID: 1902929778330806, guid: e77aa4c64d051f44eb577c383b0c7548, type: 2}
 --- !u!4 &1153184454
 Transform:
   m_ObjectHideFlags: 0
@@ -694,20 +705,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1153184455
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1153184452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 275769132a45de94793b40e5619dce70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 120493971}
-  gameOverText: {fileID: 867246677}
-  score: 0
 --- !u!1 &1173234154
 GameObject:
   m_ObjectHideFlags: 0

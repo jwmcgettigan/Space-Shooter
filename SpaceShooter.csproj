@@ -219,7 +219,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\BG_Scroller.cs" />
     <Compile Include="Assets\Scripts\Enemies\enemy.cs" />
     <Compile Include="Assets\Scripts\Enemies\enemyProjectileLauncher.cs" />
     <Compile Include="Assets\Scripts\Enemies\MotionPatterns.cs" />
@@ -228,7 +227,11 @@
     <Compile Include="Assets\Scripts\Enemy\EnemyMovement.cs" />
     <Compile Include="Assets\Scripts\Player\player.cs" />
     <Compile Include="Assets\Scripts\Player\playerProjectileLauncher.cs" />
-    <Compile Include="Assets\Scripts\UI.cs" />
+    <Compile Include="Assets\Scripts2\BG_Scroller.cs" />
+    <Compile Include="Assets\Scripts2\ProjectileLauncher.cs" />
+    <Compile Include="Assets\Scripts2\Ship.cs" />
+    <Compile Include="Assets\Scripts2\Spawner.cs" />
+    <Compile Include="Assets\Scripts2\UI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Misc Assets\Side Blaster GFX\License.txt" />

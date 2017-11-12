@@ -21,10 +21,9 @@ GameObject:
   - component: {fileID: 4274621588651972}
   - component: {fileID: 212435314023153820}
   - component: {fileID: 50530779361528442}
-  - component: {fileID: 114325492025966324}
-  - component: {fileID: 114280250114657294}
   - component: {fileID: 60445372013448680}
-  - component: {fileID: 114260099539917858}
+  - component: {fileID: 114787700913764756}
+  - component: {fileID: 114381940107130780}
   m_Layer: 0
   m_Name: enemyShip
   m_TagString: enemyShip
@@ -107,7 +106,7 @@ PolygonCollider2D:
       - {x: -0.5628315, y: -1.6874425}
       - {x: 0.57812786, y: -1.6852949}
       - {x: 0.42191577, y: -2.7836075}
---- !u!114 &114260099539917858
+--- !u!114 &114381940107130780
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -115,25 +114,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1902929778330806}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d6a1c73b9d79a7468779caf49fcf0e9, type: 3}
+  m_Script: {fileID: 11500000, guid: b0645bf5936d9a64982bf54f95c14ee8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeRate: 5
---- !u!114 &114280250114657294
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1902929778330806}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42528b79ef5a2d64b844b21b6d695e65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  friendly: 0
   projectile: {fileID: 1821561705666000, guid: c51849981818d41478e68ee3da92e33c, type: 2}
-  speed: 30
-  fireRate: 0.3
---- !u!114 &114325492025966324
+  speed: 50
+  fireRate: 0.5
+--- !u!114 &114787700913764756
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -141,10 +129,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1902929778330806}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c1ee73bc78711a4fb99e847fe842bfa, type: 3}
+  m_Script: {fileID: 11500000, guid: a59888aeb125c5a499eeab5841713827, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  content: {fileID: 0}
+  scoreText: {fileID: 0}
+  gameOverText: {fileID: 0}
+  friendly: 0
+  speed: 30
+  velocity: {x: 0, y: 0}
+  lives: 0
+  motionType: 0
 --- !u!212 &212435314023153820
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -9,15 +9,15 @@ public class UI : MonoBehaviour {
     public int score;
 
     // Use this for initialization
-    void Start () {
+    public UI() {
         score = 0;
         scoreText.text = "SCORE: " + score.ToString();
     }
 	
 	// Update is called once per frame
-	void Update () {
-		
-	}
+	public void Update() {
+        scoreText.text = "SCORE: " + score.ToString();
+    }
 
     public void addScore(int add) {
         score += add;
