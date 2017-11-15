@@ -4,12 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - fallingObject
-  - playerProjectile
-  - playerShip
-  - enemyProjectile
-  - enemyShip
-  - boundary
+  - Enemy
+  - Blast
   layers:
   - Default
   - TransparentFX
@@ -19,9 +15,9 @@ TagManager:
   - UI
   - 
   - 
-  - enemies
-  - player
-  - boundaries
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -44,9 +40,6 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: ship
-    uniqueID: 1238607855
-    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
