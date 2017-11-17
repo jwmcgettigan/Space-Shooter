@@ -219,21 +219,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Old\Scripts\Enemies\enemy.cs" />
-    <Compile Include="Assets\Old\Scripts\Enemies\enemyProjectileLauncher.cs" />
-    <Compile Include="Assets\Old\Scripts\Enemies\MotionPatterns.cs" />
-    <Compile Include="Assets\Old\Scripts\Enemies\spawnEnemies.cs" />
-    <Compile Include="Assets\Old\Scripts\Enemy\DestroyOnReachingBottom.cs" />
-    <Compile Include="Assets\Old\Scripts\Enemy\EnemyMovement.cs" />
-    <Compile Include="Assets\Old\Scripts\Player\player.cs" />
-    <Compile Include="Assets\Old\Scripts\Player\playerProjectileLauncher.cs" />
-    <Compile Include="Assets\Old\Scripts2\BG_Scroller.cs" />
-    <Compile Include="Assets\Old\Scripts2\ProjectileLauncher.cs" />
-    <Compile Include="Assets\Old\Scripts2\Ship.cs" />
-    <Compile Include="Assets\Old\Scripts2\Spawner.cs" />
-    <Compile Include="Assets\Old\Scripts2\UI.cs" />
+    <Compile Include="Assets\Scripts\AnimationAutoDestroy.cs" />
+    <Compile Include="Assets\Scripts\BG_Scroller.cs" />
     <Compile Include="Assets\Scripts\Blaster.cs" />
+    <Compile Include="Assets\Scripts\DestroyByBoundary.cs" />
     <Compile Include="Assets\Scripts\DestroyByContact.cs" />
+    <Compile Include="Assets\Scripts\EnemyController.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
   </ItemGroup>

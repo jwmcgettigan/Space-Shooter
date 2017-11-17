@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class DestroyByContact : MonoBehaviour {
 
-    public GameObject explosion;
-    public GameObject otherExplosion;
+    public GameObject[] explosions = new GameObject[11];
     public int scoreValue;
 
     private GameController gameController;
@@ -23,16 +22,20 @@ public class DestroyByContact : MonoBehaviour {
         if(other.tag == "Boundary") {
             return;
         }
-        if(other.tag == "Player") {
-            Instantiate(explosion, transform.position, transform.rotation);
-            Instantiate(otherExplosion, other.transform.position, other.transform.rotation);
+        if( tag != "PlayerProjectile" && other.tag == "Player") {
+            if (tag != "EnemyProjectile") {
+                Instantiate(explosions[Random.Range(0, 11)], transform.position, transform.rotation);
+            }
+            Instantiate(explosions[Random.Range(0, 11)], other.transform.position, other.transform.rotation);
             gameController.GameOver();
+            Destroy(other.gameObject);
+            Destroy(gameObject);
         }
-        if(tag == "PlayerProjectile" && other.tag == "Enemy" || tag == "EnemyProjectile" && other.tag == "Player") {
-            Instantiate(otherExplosion, other.transform.position, other.transform.rotation);
+        if (tag == "PlayerProjectile" && other.tag == "Enemy") {
+            Instantiate(explosions[Random.Range(0, 11)], other.transform.position, other.transform.rotation);
+            gameController.AddScore(scoreValue);
+            Destroy(other.gameObject);
+            Destroy(gameObject);
         }
-        gameController.AddScore(scoreValue);
-        Destroy(other.gameObject);
-        Destroy(gameObject);
     }
 }

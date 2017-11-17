@@ -22,7 +22,9 @@ GameObject:
   - component: {fileID: 212435314023153820}
   - component: {fileID: 50530779361528442}
   - component: {fileID: 60445372013448680}
+  - component: {fileID: 114925731667027248}
   - component: {fileID: 114090982617771700}
+  - component: {fileID: 114103948437327784}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -118,7 +120,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blast: {fileID: 1199273272761514, guid: 3aeda8e313261e14f9141cf90e1a8ac8, type: 2}
   speed: 50
-  fireRate: 0.25
+  fireRate: 0.5
+--- !u!114 &114103948437327784
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1902929778330806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20b2935438c4cc646bb7c53c278bada8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  motionType: 1
+--- !u!114 &114925731667027248
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1902929778330806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b84471b313574084398705694a743fc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 1449605497206544, guid: 4c3f153242fb0294db06adf3203ef6ac, type: 2}
+  otherExplosion: {fileID: 1121298176885952, guid: 1b01f78e893cf324097a261fe2296142,
+    type: 2}
+  scoreValue: 0
 --- !u!212 &212435314023153820
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Enemy
   - Blast
+  - EnemyProjectile
+  - PlayerProjectile
+  - Boundary
+  - Explosion
   layers:
   - Default
   - TransparentFX
@@ -40,6 +44,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 2119165687
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Explosion
+    uniqueID: 885066553
+    locked: 0
+  - name: Top
+    uniqueID: 1987309681
     locked: 0

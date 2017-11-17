@@ -20,8 +20,6 @@ public class GameController : MonoBehaviour {
     void Start() {
         gameOver = false;
         restart = false;
-        restartText.text = "";
-        gameOverText.text = "";
         score = 0;
         UpdateScore();
         StartCoroutine(SpawnWaves());
@@ -29,7 +27,7 @@ public class GameController : MonoBehaviour {
 
     void Update() {
         if (restart) {
-            if (Input.GetKey(KeyCode.R)) {
+            if (Input.anyKeyDown) {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
         }
@@ -38,15 +36,16 @@ public class GameController : MonoBehaviour {
     IEnumerator SpawnWaves() {
         while (true) {
             yield return new WaitForSeconds(startWait);
-            for(int i = 0; i < enemyCount; i++) {
-                Vector2 spawnPosition = new Vector2(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y);
-                Quaternion spawnRotation = Quaternion.identity;
-                Instantiate(enemy, spawnPosition, spawnRotation);
+            float spawnX = Random.Range(-spawnValues.x, spawnValues.x);
+            for (int i = 0; i < enemyCount; i++) {
+                Vector2 spawnPosition = new Vector2(spawnX, spawnValues.y);
+                Instantiate(enemy, spawnPosition, Quaternion.identity);
             }
             yield return new WaitForSeconds(spawnWait);
 
             if (gameOver) {
-                restartText.text = "Press any key to Restart";
+                invertEnabled(restartText);
+                InvokeRepeating("flashingRestart", 0.5f, 0.5f);
                 restart = true;
                 break;
             }
@@ -58,12 +57,20 @@ public class GameController : MonoBehaviour {
         UpdateScore();
     }
 
-    void UpdateScore() {
+    public void UpdateScore() {
         scoreText.text = "SCORE: " + score;
     }
 
     public void GameOver() {
-        gameOverText.text = "Game Over!";
+        invertEnabled(gameOverText);
         gameOver = true;
+    }
+
+    public void flashingRestart() {
+        invertEnabled(restartText);
+    }
+
+    public void invertEnabled(Text text) {
+        text.enabled = !text.enabled;
     }
 }
